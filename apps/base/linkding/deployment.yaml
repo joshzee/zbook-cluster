@@ -14,7 +14,6 @@ spec:
     spec:
       securityContext:
         runAsNonRoot: true
-        readOnlyRootFilesystem: true
         fsGroup: 33 # www-data group ID
         runAsUser: 33 # www-data user ID
         runAsGroup: 33 # www-data group ID
@@ -30,6 +29,7 @@ spec:
               mountPath: /etc/linkding/data
           securityContext:
             allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
             capabilities:
               drop:
                 - ALL
