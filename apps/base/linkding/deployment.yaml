@@ -24,6 +24,12 @@ spec:
           image: sissbruecker/linkding:1.46.2
           ports:
             - containerPort: 9090
+          env:
+            - name: LD_DISABLE_BACKGROUND_TASKS
+              value: "True"
+          envFrom:
+            - secretRef:
+                name: linkding-secret
           volumeMounts:
             - name: linkding-data
               mountPath: /etc/linkding/data
