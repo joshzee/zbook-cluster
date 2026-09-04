@@ -3,3 +3,4 @@ kubeconfig
 .env
 .env.*
 !.env.example
+*.log
