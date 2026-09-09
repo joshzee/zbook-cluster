@@ -40,3 +40,7 @@ spec:
         hosts:
           - grafana.joshlabs.me
         path: /
+        tls:
+          - secretName: grafana-tls
+            hosts:
+              - grafana.joshlabs.me
